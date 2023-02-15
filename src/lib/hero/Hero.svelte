@@ -16,7 +16,7 @@
 	};
 </script>
 
-<!-- <ul class="background -z-10">
+<ul class="background -z-10">
 	<li />
 	<li />
 	<li />
@@ -25,7 +25,7 @@
 	<li />
 	<li />
 	<li />
-</ul> -->
+</ul>
 
 <ul
 	class="absolute mt-10 lg:bottom-0 space-x-2 lg:space-y-1 lg:space-x-0 w-full lg:w-fit lg:h-[calc(100%-84px)] flex flex-row lg:flex-col items-center justify-center lg:left-2 lg:mt-2"
