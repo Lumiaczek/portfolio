@@ -21,7 +21,7 @@
 	</div>
 	<article class="lg:flex lg:flex-col lg:justify-center lg:h-full">
 		<div
-			class="grid w-full grid-cols-1 grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-y-8 gap-x-2 lg:gap-y-2 lg:gap-x-8 text-center "
+			class="grid w-full grid-cols-1 grid-rows-3 lg:grid-rows-1 lg:grid-cols-3  gap-y-6 gap-x-2 lg:gap-y-2 lg:gap-x-8 text-center "
 		>
 			<div class="p-8 bg-charcoal bg-opacity-80 rounded-2xl flex flex-col justify-center">
 				<Fa icon={faDesktop} class={'text-white text-5xl'} />
@@ -34,7 +34,7 @@
 				</p>
 			</div>
 			<div
-				class="flex flex-col p-8 bg-opacity-80 mx-4 lg:mx-0 scale-105 mb-2 lg:mb-0  bg-charcoal rounded-2xl lg:scale-110"
+				class="flex flex-col p-8 bg-opacity-80 lg:mx-4 mx-0 mb-2 lg:mb-0 sclae-105  bg-charcoal rounded-2xl lg:scale-110"
 			>
 				<Fa icon={faWrench} class={'text-white text-5xl'} />
 

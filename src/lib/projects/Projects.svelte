@@ -20,12 +20,10 @@
 <section
 	class="flex flex-col h-fit mt-6 lg:h-[90vh] text-center lg:text-left md:mx-auto xl:w-[92%] 2xl:w-[85%] px-6 xl:px-0 scroll-mt-20 lg:scroll-p-0"
 >
-	<div class="flex flex-col mt-10 mb-8 lg:mb-0 text-white font-['Josefin_Sans']">
-		<div class="flex flex-row justify-between items-end">
-			<div>
-				<p class="text-2xl mb-2 lg:text-3xl">Moje realizacje</p>
-				<h1 class="text-5xl lg:text-6xl xl:text-7xl">&lt;Projekty /&gt;</h1>
-			</div>
+	<div class="flex flex-col mt-10 mb-8 lg:mb-0 text-white font-['Josefin_Sans'] text-center">
+		<div>
+			<p class="text-2xl mb-2 lg:text-3xl">Moje realizacje</p>
+			<h1 class="text-5xl lg:text-6xl xl:text-7xl">&lt;Projekty /&gt;</h1>
 		</div>
 	</div>
 

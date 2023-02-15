@@ -10,9 +10,9 @@
 </script>
 
 <div
-	class="flex flex-col lg:h-[45vh] justify-center items-center text-center lg:text-left md:mx-auto xl:w-[92%] 2xl:w-[85%] px-6 xl:px-0 text-white mt-12 lg:mt-6"
+	class="flex flex-col lg:h-[45vh] justify-center items-center text-center lg:text-left md:mx-auto xl:w-[92%] 2xl:w-[85%] px-10  xl:px-0 text-white mt-12 lg:mt-6"
 >
-	<div class="flex flex-col lg:flex-row justify-between items-center">
+	<div class="flex flex-col lg:flex-row justify-between items-center px-4">
 		<div
 			class=" flex flex-col justify-center text-center bg-charcoal p-8 bg-opacity-80 rounded-2xl"
 		>
