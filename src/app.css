@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+	outline: 1px red solid !important;
+} */
+
 @layer base {
 	html {
 		font-family: 'Josefin Sans';
