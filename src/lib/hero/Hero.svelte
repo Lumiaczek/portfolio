@@ -1,12 +1,15 @@
 <script lang="ts" context="module">
 	import { goto } from '$app/navigation';
 	import Button from '$lib/Button.svelte';
+	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
 	import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 	import { faFacebookSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <script lang="ts">
+	let innerHeight: number;
+
 	const projects = () => {
 		goto('/projects');
 	};
@@ -29,6 +32,7 @@
 
 <ul
 	class="absolute mt-10 lg:bottom-0 space-x-2 lg:space-y-1 lg:space-x-0 w-full lg:w-fit lg:h-[calc(100%-84px)] flex flex-row lg:flex-col items-center justify-center lg:left-2 lg:mt-2"
+	class:hidden={innerHeight < 680}
 >
 	<li class="w-28 lg:h-28 rounded-full lg:w-0 border-[2px] lg:mb-2 border-white bg-white" />
 	<li>
@@ -110,9 +114,18 @@
 		</div>
 	</div>
 
-	<div class="absolute bottom-1 md:bottom-5 w-full flex justify-center items-center animate-bounce">
-		<a class="rounded-full bg-charcoal py-4 px-5 bg-opacity-80 cursor-pointer" href="#services">
+	<div
+		class="absolute bottom-1 md:bottom-5 w-full flex justify-center items-center animate-bounce"
+		class:hidden={innerHeight < 675}
+	>
+		<a
+			class="rounded-full bg-charcoal py-4 px-5 bg-opacity-80 cursor-pointer"
+			href="#services"
+			aria-label="Przejdź do sekcji usługi"
+		>
 			<Fa icon={faArrowDown} class={'text-white text-2xl'} />
 		</a>
 	</div>
 </section>
+
+<svelte:window bind:innerHeight />

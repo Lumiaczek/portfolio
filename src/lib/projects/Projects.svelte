@@ -39,9 +39,10 @@
 						type="dark"
 						size="1.1x"
 						clazz="w-fit absolute right-2 top-2"
+						ariaLabel="Hydrobar"
 						on:clicked={hydrobar}
 					/>
-					<img src="/Hydrobar.png" alt="" class="rounded-t-2xl " />
+					<img src="/Hydrobar.webp" alt="" class="rounded-t-2xl " />
 					<div class="bg-charcoal bg-opacity-90 rounded-b-2xl p-6 ">
 						<h1 class="text-3xl mb-2">Hydrobar</h1>
 						<p>
@@ -58,9 +59,10 @@
 						type="dark"
 						size="1.1x"
 						clazz="w-fit absolute right-2 top-2"
+						ariaLabel="Harcinfo"
 						on:clicked={harcinfo}
 					/>
-					<img src="/HarcInfo.png" alt="" class="rounded-t-2xl" />
+					<img src="/HarcInfo.webp" alt="" class="rounded-t-2xl" />
 					<div class="bg-charcoal bg-opacity-90  rounded-b-2xl p-6 ">
 						<h1 class="text-3xl mb-2">HarcInfo</h1>
 						<p>
@@ -77,9 +79,10 @@
 						type="dark"
 						size="1.1x"
 						clazz="w-fit absolute right-2 top-2"
+						ariaLabel="Stalmaks"
 						on:clicked={stalmaks}
 					/>
-					<img src="/Stalmaks.png" alt="" class="rounded-t-2xl" />
+					<img src="/Stalmaks.webp" alt="" class="rounded-t-2xl" />
 					<div class="bg-charcoal bg-opacity-90 rounded-b-2xl p-6 ">
 						<h1 class="text-3xl mb-2">Stalmaks</h1>
 						<p>

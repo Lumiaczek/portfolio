@@ -11,6 +11,7 @@
 	export let icon: string;
 	export let size: string;
 	export let clazz = '';
+	export let ariaLabel = '';
 </script>
 
 <button
@@ -18,6 +19,7 @@
 	class:btn-main={type === 'main'}
 	class:btn-outline={type === 'outline'}
 	class:btn-dark={type === 'dark'}
+	aria-label={ariaLabel}
 	on:click={() => {
 		dispatch('clicked');
 	}}
@@ -39,7 +41,7 @@
 
 <style lang="postcss">
 	.btn {
-		@apply py-3 px-6 rounded-2xl font-medium text-white text-base xl:text-lg hover:bg-opacity-50 focus:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200;
+		@apply py-3 px-6 rounded-2xl font-medium text-white text-sm md:text-base xl:text-lg hover:bg-opacity-50 focus:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200;
 	}
 
 	.btn-main {
