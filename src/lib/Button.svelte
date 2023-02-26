@@ -19,6 +19,7 @@
 	class:btn-main={type === 'main'}
 	class:btn-outline={type === 'outline'}
 	class:btn-dark={type === 'dark'}
+	class:btn-main-contact={type === 'main-contact'}
 	aria-label={ariaLabel}
 	on:click={() => {
 		dispatch('clicked');
@@ -54,5 +55,9 @@
 
 	.btn-dark {
 		@apply bg-charcoal bg-opacity-80;
+	}
+
+	.btn-main-contact {
+		@apply bg-blue-800 bg-opacity-90;
 	}
 </style>

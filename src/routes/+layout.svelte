@@ -15,9 +15,5 @@
 	/>
 </svelte:head>
 
-{#if $navigating}
-	<Loader />
-{:else}
-	<Navbar />
-	<slot />
-{/if}
+<Navbar />
+<slot />
