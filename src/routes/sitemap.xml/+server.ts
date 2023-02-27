@@ -19,10 +19,6 @@ export async function GET() {
         <lastmod>2023-02-17</lastmod>
      </url>  
      <url>
-        <loc>https://borowski.tech/projects</loc>
-        <lastmod>2023-02-17</lastmod>
-     </url>  
-     <url>
         <loc>https://borowski.tech/services</loc>
         <lastmod>2023-02-17</lastmod>
      </url>      

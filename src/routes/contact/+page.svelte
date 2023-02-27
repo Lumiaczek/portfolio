@@ -4,6 +4,7 @@
 	import { faEnvelope, faMap, faAddressCard } from '@fortawesome/free-regular-svg-icons';
 	import Footer from '$lib/footer/Footer.svelte';
 	import Toast from '$lib/Toast.svelte';
+	import { dataset_dev } from 'svelte/internal';
 </script>
 
 <script lang="ts">
@@ -14,9 +15,63 @@
 	let toastText = '';
 	let status = '';
 
+	let errors = {
+		name: false,
+		email: false,
+		msg: false
+	};
+
+	$: {
+		if (name.length > 0) {
+			errors.name = false;
+		}
+
+		if (email.length > 0) {
+			errors.email = false;
+		}
+
+		if (msg.length > 0) {
+			errors.msg = false;
+		}
+	}
+
+	const validate = async () => {
+		let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+		if (email.match(validEmail)) {
+			return true;
+		}
+
+		errors.email = true;
+
+		setTimeout(() => {
+			errors.email = false;
+		}, 2500);
+
+		return false;
+	};
+
 	const submitForm = async () => {
 		if (!name || !email || !msg || name === '' || email === '' || msg === '') {
-			showToast('Failed', 'Uzupełnij dane');
+			if (!name || name === '') {
+				errors.name = true;
+			}
+
+			if (!email || email === '') {
+				errors.email = true;
+			}
+
+			if (!msg || msg === '') {
+				errors.msg = true;
+			}
+
+			showToast('Failed', 'Uzupełnij wszystkie pola');
+
+			return;
+		}
+
+		if (!(await validate())) {
+			showToast('Failed', 'Wpisz poprawny email');
 
 			return;
 		}
@@ -76,7 +131,7 @@
 					type="text"
 					class="bg-gray-50 border border-gray-300 text-charcoal text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
 					placeholder="Jan"
-					required
+					class:border-red-600={errors.name}
 					bind:value={name}
 				/>
 			</div>
@@ -86,8 +141,8 @@
 					type="text"
 					class="bg-gray-50 border border-gray-300 text-charcoal text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
 					placeholder="example@example.com"
-					required
 					bind:value={email}
+					class:border-red-600={errors.email}
 				/>
 			</div>
 			<div>
@@ -96,9 +151,9 @@
 					class="bg-gray-50 border border-gray-300 text-charcoal text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 resize-none"
 					cols="30"
 					rows="6"
-					required
 					bind:value={msg}
 					placeholder="Proszę o kontakt..."
+					class:border-red-600={errors.msg}
 				/>
 				<Button
 					text="Wyślij"
@@ -126,7 +181,11 @@
 					<Fa icon={faMap} size="2.5x" class="mr-3 mb-2" />
 					<h1 class="text-4xl">Adres</h1>
 				</div>
-				<a href="" class="text-lg">Polska, Zachodniopomorskie, Barlinek</a>
+				<a
+					href="https://www.google.com/maps/place/Barlinek/data=!4m2!3m1!1s0x47072e3f8ff2efc1:0x127845cf4a4f8f31?sa=X&ved=2ahUKEwj6wbSxt7b9AhWIs4sKHQJUDm0Q8gF6BAgIEAI"
+					target="Google Maps"
+					class="text-lg">Polska, Zachodniopomorskie, Barlinek</a
+				>
 			</div>
 			<div class="p-4">
 				<div class="flex flex-row items-center">

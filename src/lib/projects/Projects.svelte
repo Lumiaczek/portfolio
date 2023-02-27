@@ -13,7 +13,7 @@
 	};
 
 	const harcinfo = () => {
-		goto('/projects');
+		goto('https://github.com/lumiaczek');
 	};
 </script>
 

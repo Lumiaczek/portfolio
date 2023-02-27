@@ -47,7 +47,6 @@
 		>
 			<NavbarItem route={'/'} text={'Strona główna'} />
 			<NavbarItem route={'/services'} text={'Usługi'} />
-			<NavbarItem route={'/projects'} text={'Projekty'} />
 			<Button
 				text={'Kontakt'}
 				type={'main'}
