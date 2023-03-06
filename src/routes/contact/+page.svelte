@@ -4,7 +4,6 @@
 	import { faEnvelope, faMap, faAddressCard } from '@fortawesome/free-regular-svg-icons';
 	import Footer from '$lib/footer/Footer.svelte';
 	import Toast from '$lib/Toast.svelte';
-	import { dataset_dev } from 'svelte/internal';
 </script>
 
 <script lang="ts">
@@ -167,7 +166,7 @@
 			</div>
 		</form>
 		<div
-			class="p-8 rounded-xl mt-10 xl:mt-0 xl:rounded-l-none xl:rounded-r-xl xl:w-1/2 flex flex-col justify-around  bg-charcoal bg-opacity-80 text-white"
+			class="p-8 rounded-xl mt-6 xl:mt-0 xl:rounded-l-none xl:rounded-r-xl xl:w-1/2 flex flex-col justify-around  bg-charcoal bg-opacity-80 text-white"
 		>
 			<div class="p-4">
 				<div class="flex flex-row items-center">
