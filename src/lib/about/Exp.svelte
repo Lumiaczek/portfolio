@@ -2,6 +2,12 @@
 	<div
 		class="p-4 rounded-lg bg-opacity-25 bg-blue-700 flex justify-between items-center text-base md:text-lg"
 	>
+		<p>Praktykant ZTI w GBSBank</p>
+		<p>2023</p>
+	</div>
+	<div
+		class="p-4 rounded-lg bg-opacity-25 bg-blue-700 flex justify-between items-center text-base md:text-lg"
+	>
 		<p>Website Developer dla Hydrobar Paweł Figiel</p>
 		<p>2022</p>
 	</div>

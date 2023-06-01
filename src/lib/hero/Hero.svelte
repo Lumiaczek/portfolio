@@ -17,6 +17,31 @@
 	const contact = () => {
 		goto('/contact');
 	};
+
+	const HERO = 'Daniel Borowski';
+	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+	let hero = 'Daniel Borowski';
+
+	let i = 0;
+
+	const interval = setInterval(() => {
+		hero = hero
+			.split('')
+			.map((letter, index) => {
+				if (index <= i) {
+					return HERO[index];
+				}
+
+				return letters[Math.floor(Math.random() * 26)];
+			})
+			.join('');
+		i++;
+
+		if (i >= HERO.length) {
+			clearInterval(interval);
+		}
+	}, 100);
 </script>
 
 <ul class="background -z-10">
@@ -85,7 +110,7 @@
 				<h1
 					class="text-4xl sm:text-6xl xl:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800 font-['Bungee']"
 				>
-					Daniel Borowski
+					{hero}
 				</h1>
 				<p class="text-base lg:text-lg">
 					Jestem Full-stack Web Developerem, czyli tworzę strony i aplikacje internetowe. <br />

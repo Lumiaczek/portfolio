@@ -5,6 +5,7 @@
 	import Bio from '$lib/about/Bio.svelte';
 	import Edu from '$lib/about/Edu.svelte';
 	import Exp from '$lib/about/Exp.svelte';
+	import Crt from '$lib/about/Crt.svelte';
 	import { onMount } from 'svelte';
 </script>
 
@@ -35,7 +36,8 @@
 	const options = [
 		{ name: 'Bio', component: Bio },
 		{ name: 'Exp', component: Exp },
-		{ name: 'Edu', component: Edu }
+		{ name: 'Edu', component: Edu },
+		{ name: 'Crt', component: Crt }
 	];
 
 	let selected = options[0];
@@ -56,6 +58,10 @@
 				selected = options[2];
 				break;
 
+			case 'Crt':
+				selected = options[3];
+				break;
+
 			default:
 				selected = options[0];
 				break;
@@ -74,7 +80,7 @@
 
 	<article class="flex flex-col lg:flex-row h-full lg:gap-4 text-white ">
 		<div class="bg-charcoal bg-opacity-80 lg:my-6  lg:w-1/2 rounded-2xl p-6">
-			<div class="flex flex-row items-center">
+			<div class="flex flex-row flex-wrap justify-center lg:justify-start items-center">
 				<button
 					class="about-btn"
 					class:currentAbout={current === 'Bio'}
@@ -95,6 +101,13 @@
 					on:click={() => {
 						changeCurrent('Edu');
 					}}>Edukacja</button
+				>
+				<button
+					class="about-btn"
+					class:currentAbout={current === 'Crt'}
+					on:click={() => {
+						changeCurrent('Crt');
+					}}>Certyfikaty</button
 				>
 			</div>
 			<div class="mt-4 px-2">

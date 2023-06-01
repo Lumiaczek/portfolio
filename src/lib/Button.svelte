@@ -19,6 +19,7 @@
 	class:btn-main={type === 'main'}
 	class:btn-outline={type === 'outline'}
 	class:btn-dark={type === 'dark'}
+	class:btn-danger={type === 'danger'}
 	class:btn-main-contact={type === 'main-contact'}
 	aria-label={ariaLabel}
 	on:click={() => {
@@ -47,6 +48,10 @@
 
 	.btn-main {
 		@apply bg-blue-800 bg-opacity-30;
+	}
+
+	.btn-danger {
+		@apply bg-red-700 bg-opacity-80;
 	}
 
 	.btn-outline {
