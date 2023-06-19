@@ -1,6 +1,4 @@
 <script context="module">
-	import Loader from '$lib/Loader.svelte';
-	import { navigating } from '$app/stores';
 	import Navbar from '$lib/navbar/Navbar.svelte';
 </script>
 

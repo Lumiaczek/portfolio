@@ -1,7 +1,9 @@
 <script context="module">
 	import Button from '$lib/Button.svelte';
+	import Navbar from '$lib/navbar/Navbar.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import '../app.css';
 </script>
 
 <script lang="ts">
@@ -10,6 +12,13 @@
 	};
 </script>
 
+<svelte:head>
+	<title>
+		Daniel Borowski | {$page.error?.message}
+	</title>
+</svelte:head>
+
+<Navbar />
 <main class="flex flex-col justify-center items-center hero p-4">
 	<div class="text-center p-8 bg-charcoal bg-opacity-80 rounded-3xl text-white">
 		<h2

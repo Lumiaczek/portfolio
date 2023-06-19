@@ -47,6 +47,14 @@
 		>
 			<NavbarItem route={'/'} text={'Strona główna'} />
 			<NavbarItem route={'/services'} text={'Usługi'} />
+			<div>
+				<a
+					href="/Daniel Borowski.pdf"
+					class="text-xl rounded-2xl py-3 px-3 hover:underline underline-offset-4 focus:ring-2 outline-none focus:ring-blue-500 active:ring-0 cursor-pointer"
+				>
+					CV
+				</a>
+			</div>
 			<Button
 				text={'Kontakt'}
 				type={'main'}
