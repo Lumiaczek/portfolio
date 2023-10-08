@@ -5,6 +5,8 @@
 <script lang="ts">
 	export let text: string;
 	export let route: string;
+
+
 </script>
 
 <div>
