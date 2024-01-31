@@ -9,6 +9,10 @@
 	const I2CS = () => {
 		goto('https://www.credly.com/badges/e7cc024e-620d-4135-bc86-8a868921990c');
 	};
+
+	const NS = () => {
+		goto('https://www.credly.com/badges/543e1f8b-d2f4-41e6-bfb7-8068c0b3a271');
+	};
 </script>
 
 <div class="space-y-3">
@@ -25,6 +29,22 @@
 				clazz="w-fit absolute right-2 top-2"
 				ariaLabel="Harcinfo"
 				on:clicked={CCNA}
+			/>
+		</div>
+	</div>
+	<div class="rounded-xl flex flex-row items-center bg-opacity-25 bg-blue-700 p-4 relative">
+		<img src="/ns.png " alt="" width="100" />
+		<div class="flex flex-col ml-3 text-left">
+			<p class="text-xl font-medium">CCNA: Network Security</p>
+			<p class="text-sm">Cisco Networking Academy</p>
+			<Button
+				text=""
+				icon="glassNo"
+				type="dark"
+				size="1.1x"
+				clazz="w-fit absolute right-2 top-2"
+				ariaLabel="Harcinfo"
+				on:clicked={NS}
 			/>
 		</div>
 	</div>
